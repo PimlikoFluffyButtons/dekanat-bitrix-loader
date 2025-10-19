@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Метапакет 2.1.x -->
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.30" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.3" />
+    <!-- В 2.1 обычно использовали System.Data.SqlClient -->
+  </ItemGroup>
+
+  <!-- ВАЖНО: положить SQL-файл рядом с DLL при публикации -->
+  <ItemGroup>
+    <Content Include="main_query.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
