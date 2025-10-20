@@ -19,4 +19,8 @@ dotnet publish -c Release -f netcoreapp2.1
 New-Item -ItemType Directory -Force -Path "C:\inetpub\myapptest" | Out-Null
 robocopy ".\bin\Release\netcoreapp2.1\publish" "C:\inetpub\myapptest" /MIR
 
+
 4. Добавить права доступа к БД для IIS APPPOOL
+5. Точки входа
+http://localhost/teachersapi/api/teachers?key=
+http://localhost/teachersapi/health
